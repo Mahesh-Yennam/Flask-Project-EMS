@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block main %}
+<form>
+    <table >
+        <tr>
+            <td colspan="4" style="text-align: center;">
+                <h2>Employee Information</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Salary</td>
+        </tr>
+
+        {% for row in rows %}
+
+        <tr>
+            <td>{{row["id"]}}</td>
+            <td>{{row["name"]}}</td>
+            <td>{{row["email"]}}</td>
+            <td>{{row["salary"]}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</form>
+{% endblock main %}
